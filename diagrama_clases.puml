@@ -1,0 +1,70 @@
+@startuml
+' Título y personalización de la apariencia del diagrama
+title Diagrama de Clases - Sistema de Gestión de Almacén
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam roundCorner 10
+skinparam shadowing true
+
+' Definición de las clases y sus miembros más importantes
+
+class Producto {
+  - {static} contadorId : int
+  - id : int
+  - nombre : String
+  - marca : String
+  - categoria : String
+  - precio : double
+  - stock : int
+  - unidadDeMedida : String
+  - moneda : String
+  --
+  + Producto(nombre, ..., moneda)
+  + getNombre() : String
+  ' (y otros getters/setters)
+}
+
+class FormularioProducto {
+  - productoExistente : Producto
+  - nuevoProducto : Producto
+  - txtNombre : JTextField
+  - txtMarca : JTextField
+  - comboCategoria : JComboBox
+  - categoriaModel : DefaultComboBoxModel
+  ' (y otros componentes GUI)
+  --
+  + FormularioProducto(owner)
+  + FormularioProducto(owner, producto)
+  + getNuevoProducto() : Producto
+  - initComponents()
+  - cargarDatosProducto()
+  ' + Listeners para gestionar categorías dinámicamente
+}
+
+class VentanaPrincipal {
+  - inventario : ArrayList<Producto>
+  - tablaProductos : JTable
+  - modeloTabla : DefaultTableModel
+  --
+  + VentanaPrincipal()
+  - actualizarTabla()
+}
+
+class Main {
+  --
+  + {static} main(args : String[])
+}
+
+
+' Definición de las relaciones entre las clases
+
+Main ..> VentanaPrincipal : "Crea y muestra"
+
+VentanaPrincipal "1" --o "0..*" Producto : "Contiene en inventario"
+
+VentanaPrincipal ..> FormularioProducto : "Crea y usa para"
+note on link: Añadir / Editar
+
+FormularioProducto ..> Producto : "Crea o modifica"
+
+@enduml

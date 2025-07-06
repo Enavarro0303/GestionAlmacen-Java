@@ -1,0 +1,22 @@
+# Archivos compilados de Java
+*.class
+
+# Archivos de Log
+*.log
+
+# Paquetes de Java
+*.jar
+*.war
+*.ear
+
+# Archivos del IDE Eclipse
+.project
+.classpath
+.settings/
+bin/
+tmp/
+.metadata
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
