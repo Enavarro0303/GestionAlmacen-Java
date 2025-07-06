@@ -1,9 +1,11 @@
 📦 Sistema de Gestión de Almacén
+
 Este es un sistema de escritorio desarrollado en Java para la gestión básica de un inventario o almacén. La aplicación permite llevar un control de los productos, realizando las operaciones fundamentales de Creación, Lectura, Actualización y Eliminación (CRUD) a través de una interfaz gráfica intuitiva construida con Swing.
 
 El proyecto fue desarrollado como parte del curso "Técnicas de Programación Orientada a Objetos", aplicando conceptos clave de POO, manejo de eventos y diseño de interfaces de usuario.
 
 ✨ Características Principales
+
 Gestión Completa de Productos (CRUD):
 
 Añadir: Registrar nuevos productos en el inventario.
@@ -23,6 +25,7 @@ Interfaz Gráfica Intuitiva: Desarrollada con Java Swing, la aplicación es fác
 Validación de Datos: El sistema previene errores comunes, como la introducción de texto en campos numéricos (precio, stock).
 
 📸 Captura de Pantalla
+
 Aquí puedes colocar una captura de pantalla de tu aplicación en funcionamiento. ¡Muestra la tabla con algunos productos!
 
 🛠️ Tecnologías Utilizadas
@@ -35,6 +38,7 @@ IDE: Eclipse IDE
 Control de Versiones: Git y GitHub
 
 🚀 Cómo Empezar
+
 Para ejecutar este proyecto, necesitas tener instalado lo siguiente:
 
 Java Development Kit (JDK), versión 11 o superior.
@@ -52,3 +56,5 @@ Busca la clase Main.java dentro del paquete com.gestion.almacen.main.
 Haz clic derecho sobre Main.java y selecciona Run As > Java Application.
 
 👤 Autores
+
+
